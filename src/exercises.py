@@ -8,4 +8,4 @@ def multiply(a: int, b: int) -> int:
     pass
 
 def divide(a: int, b: int) -> int:
-    pass
+    return a / b
