@@ -24,14 +24,14 @@ jobs:
       with:
         python-version: "3.10"
     - name: Test Add Function
-      continue-on-error: true
+      if: always()
       run: python -m unittest src.tests.Tests.test_add
     - name: Test Substract Function
-      continue-on-error: true
+      if: always()
       run: python -m unittest src.tests.Tests.test_substract
     - name: Test Multiply Function
-      continue-on-error: true
+      if: always()
       run: python -m unittest src.tests.Tests.test_multiply
     - name: Test Divide Function
-      continue-on-error: true
+      if: always()
       run: python -m unittest src.tests.Tests.test_divide
