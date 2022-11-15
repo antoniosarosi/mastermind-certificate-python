@@ -24,14 +24,13 @@ jobs:
       with:
         python-version: "3.10"
     - name: Test Add Function
-      if: always()
       run: python -m unittest src.tests.Tests.test_add
     - name: Test Substract Function
-      if: always()
+      if: success() || failure()
       run: python -m unittest src.tests.Tests.test_substract
     - name: Test Multiply Function
-      if: always()
+      if: success() || failure()
       run: python -m unittest src.tests.Tests.test_multiply
     - name: Test Divide Function
-      if: always()
+      if: success() || failure()
       run: python -m unittest src.tests.Tests.test_divide
